@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'backoffice'
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'TPCESI.urls'
+
+TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 
 TEMPLATES = [
     {
