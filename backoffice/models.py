@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Personnes(models.Model):
-    nom = models.CharField(max_lenght=150)
-    prenom = models.CharField(max_lenght=150)
+    nom = models.CharField(max_length=150)
+    prenom = models.CharField(max_length=150)
     datenaissance = models.DateTimeField()
     adresse = models.TextField()
     tel = models.IntegerField()
