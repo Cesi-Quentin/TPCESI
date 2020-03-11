@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 
 
@@ -14,6 +15,7 @@ class Personne(models.Model):
     photo = models.TextField() #blob
     statut = models.CharField(max_length=50)
     promotion = models.ForeignKey(Promotion, on_delete=models.CASCADE)
+    mail = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE, default='0000000')
 
 
 class Event(models.Model):
