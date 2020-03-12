@@ -46,4 +46,4 @@ class Publication(models.Model):
     object = models.Manager()
 
     def __unicode__(self):
-        return self.nom
+        return self.post
