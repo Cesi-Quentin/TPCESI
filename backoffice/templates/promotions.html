@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,88 +8,42 @@
     <title>CESI - Promotions</title>
 
     {% include 'importCss.html' %}
-  </head>
+</head>
 
-  <body>
+<body>
 
-  <header>
+<header>
     {% include 'header.html' %}
-  </header>
+</header>
 
-  {% include 'navbar.html' %}
+{% include 'navbar.html' %}
 
-    <section>
-      <div class="container">
+<section>
+    <div class="container">
         <div class="row">
-          <div class="col-md-8">
-            <div class="groups">
-              <h1 class="page-header">Liste des promotions</h1>
-              {% for promo in promo_list %}
-              <div class="group-item">
-                <img src="../static/img/group.png" alt="">
-                <h4><a href="#">{{ promo.nom }}</a></h4>
-                <p>{{ promo.description }}</p>
-<!--                <p>-->
-<!--                  <a href="#" class="btn btn-default">Voir élèves</a>-->
-<!--                </p>-->
-              </div>
-              <div class="clearfix"></div>
-              {% endfor %}
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="panel panel-default friends">
-              <div class="panel-heading">
-                <h3 class="panel-title">Ma promotion</h3>
-              </div>
-              <div class="panel-body">
-                <ul>
-                  <li><a href="profile.html" class="thumbnail"><img src="../static/img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="../static/img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="../static/img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="../static/img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="../static/img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="../static/img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="../static/img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="../static/img/user.png" alt=""></a></li>
-                  <li><a href="profile.html" class="thumbnail"><img src="../static/img/user.png" alt=""></a></li>
-                </ul>
-                <div class="clearfix"></div>
-                <a class="btn btn-primary" href="#">Voir tous les élèves</a>
-              </div>
-            </div>
-            <div class="panel panel-default groups">
-              <div class="panel-heading">
-                <h3 class="panel-title">Les promotions</h3>
-              </div>
-              <div class="panel-body">
-                <div class="group-item">
-                  <img src="../static/img/group.png" alt="">
-                  <h4><a href="#" class="">Promotion n°1</a></h4>
-                  <p>RIL 2018-2020</p>
+            <div class="col-md-8">
+                <div class="groups">
+                    <h1 class="page-header">Liste des promotions</h1>
+                    {% for promo in promo_list %}
+                        <div class="group-item">
+                            <img src="../static/img/group.png" alt="">
+                            <h4><a href="#">{{ promo.nom }}</a></h4>
+                            <p>{{ promo.description }}</p>
+                            <!--                <p>-->
+                            <!--                  <a href="#" class="btn btn-default">Voir élèves</a>-->
+                            <!--                </p>-->
+                        </div>
+                        <div class="clearfix"></div>
+                    {% endfor %}
                 </div>
-                <div class="clearfix"></div>
-                <div class="group-item">
-                  <img src="../static/img/group.png" alt="">
-                  <h4><a href="#" class="">Promotion n°2</a></h4>
-                  <p>RISR 2019-2021</p>
-                </div>
-                <div class="clearfix"></div>
-                <div class="group-item">
-                  <img src="../static/img/group.png" alt="">
-                  <h4><a href="#" class="">Promotion n°3</a></h4>
-                  <p>RISR 2020-2022</p>
-                </div>
-                <div class="clearfix"></div>
-                <a href="#" class="btn btn-primary">Voir toutes les promotions</a>
-              </div>
             </div>
-          </div>
+            <div class="col-md-4">
+                {% include 'SideBar.html' %}
+            </div>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-   {% include 'footer.html' %}
-  </body>
+{% include 'footer.html' %}
+</body>
 </html>
