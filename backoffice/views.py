@@ -10,7 +10,7 @@ def index(request):
 
 
 def evenements(request):
-    event_list = Event.objects.all()
+    event_list = Event.object.all()
     return render(request, 'evenements.html', {'event_list': event_list})
 
 
