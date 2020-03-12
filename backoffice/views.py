@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.template import Context, loader
+from backoffice.models import Promotion
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -19,7 +22,8 @@ def profil(request):
 
 
 def promo(request):
-    return render(request, 'promotions.html')
+    promo_list = Promotion.object.all()
+    return render(request, 'promotions.html', {'promo_list': promo_list})
 
 
 def trombi(request):

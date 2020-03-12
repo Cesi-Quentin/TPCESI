@@ -38,32 +38,17 @@
           <div class="col-md-8">
             <div class="groups">
               <h1 class="page-header">Liste des promotions</h1>
+              {% for promo in promo_list %}
               <div class="group-item">
                 <img src="../static/img/group.png" alt="">
-                <h4><a href="#">Promotion n°1</a></h4>
+                <h4><a href="#">{{ promo.nom }}</a></h4>
                 <p>RIL 2018 - 2020</p>
 <!--                <p>-->
 <!--                  <a href="#" class="btn btn-default">Voir élèves</a>-->
 <!--                </p>-->
               </div>
               <div class="clearfix"></div>
-                <div class="group-item">
-                  <img src="../static/img/group.png" alt="">
-                  <h4><a href="#">Promotion n°2</a></h4>
-                  <p>RIL 2019 - 2021</p>
-                  <!--                <p>-->
-                  <!--                  <a href="#" class="btn btn-default">Voir élèves</a>-->
-                  <!--                </p>-->
-                </div>
-              <div class="clearfix"></div>
-                <div class="group-item">
-                  <img src="../static/img/group.png" alt="">
-                  <h4><a href="#">Promotion n°3</a></h4>
-                  <p>RIL 2020 - 2022</p>
-                  <!--                <p>-->
-                  <!--                  <a href="#" class="btn btn-default">Voir élèves</a>-->
-                  <!--                </p>-->
-                </div>
+              {% endfor %}
             </div>
           </div>
 

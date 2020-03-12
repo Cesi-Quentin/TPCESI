@@ -4,6 +4,10 @@ from django.db import models
 
 class Promotion(models.Model):
     nom = models.CharField(max_length=50)
+    object = models.Manager()
+
+    def __unicode__(self):
+        return self.nom
 
 
 class Personne(models.Model):
