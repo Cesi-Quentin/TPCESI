@@ -20,7 +20,11 @@ class Personne(models.Model):
     photo = models.TextField() #blob
     statut = models.CharField(max_length=50)
     promotion = models.ForeignKey(Promotion, on_delete=models.CASCADE)
-    userid = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE, default='0000000')
+    userid = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE, null=True)
+    object = models.Manager()
+
+    def __unicode__(self):
+        return self.nom
 
 
 class Event(models.Model):
@@ -28,6 +32,10 @@ class Event(models.Model):
     desc = models.TextField()
     date = models.DateTimeField()
     lieu = models.TextField()
+    object = models.Manager()
+
+    def __unicode__(self):
+        return self.nom
 
 
 class Publication(models.Model):
@@ -35,3 +43,7 @@ class Publication(models.Model):
     title = models.TextField()
     author = models.CharField(max_length=50)
     pub_date = models.DateTimeField()
+    object = models.Manager()
+
+    def __unicode__(self):
+        return self.nom

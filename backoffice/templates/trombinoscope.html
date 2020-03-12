@@ -26,65 +26,16 @@
             <div class="members">
               <h1 class="page-header">Trombinoscope</h1>
 
+              {% for personne in perso_list %}
               <div class="row member-row">
                 <div class="col-md-3">
-                  <img src="../static/img/user.png" class="img-thumbnail" alt="">
+                  <img src="{{ perso.photo }}" class="img-thumbnail" alt="">
                   <div class="text-center">
-                    NOM Prénom
+                    {{ perso.nom }} {{ perso.prenom }}
                   </div>
                 </div>
-                <div class="col-md-3">
-                  <p><a href="#" class="btn btn-default btn-block"><i class="fa fa-envelope"></i> Message</a></p>
-                </div>
-                <div class="col-md-3">
-                  <p><a href="#" class="btn btn-primary btn-block"><i class="fa fa-edit"></i> Voir Profil</a></p>
-                </div>
               </div>
-
-              <div class="row member-row">
-                <div class="col-md-3">
-                  <img src="../static/img/user.png" class="img-thumbnail" alt="">
-                  <div class="text-center">
-                    NOM Prénom
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <p><a href="#" class="btn btn-default btn-block"><i class="fa fa-envelope"></i> Message</a></p>
-                </div>
-                <div class="col-md-3">
-                  <p><a href="#" class="btn btn-primary btn-block"><i class="fa fa-edit"></i> Voir Profil</a></p>
-                </div>
-              </div>
-
-              <div class="row member-row">
-                <div class="col-md-3">
-                  <img src="../static/img/user.png" class="img-thumbnail" alt="">
-                  <div class="text-center">
-                    NOM Prénom
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <p><a href="#" class="btn btn-default btn-block"><i class="fa fa-envelope"></i> Message</a></p>
-                </div>
-                <div class="col-md-3">
-                  <p><a href="#" class="btn btn-primary btn-block"><i class="fa fa-edit"></i> Voir Profil</a></p>
-                </div>
-              </div>
-
-              <div class="row member-row">
-                <div class="col-md-3">
-                  <img src="../static/img/user.png" class="img-thumbnail" alt="">
-                  <div class="text-center">
-                    NOM Prénom
-                  </div>
-                </div>
-                <div class="col-md-3">
-                  <p><a href="#" class="btn btn-default btn-block"><i class="fa fa-envelope"></i> Message</a></p>
-                </div>
-                <div class="col-md-3">
-                  <p><a href="#" class="btn btn-primary btn-block"><i class="fa fa-edit"></i> Voir Profil</a></p>
-                </div>
-              </div>
+              {% endfor %}
 
             </div>
           </div>
