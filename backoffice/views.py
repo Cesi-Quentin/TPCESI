@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.template import Context, loader
-from backoffice.models import Promotion
+from backoffice.models import Promotion, Event
 from django.http import HttpResponse
 
 
@@ -10,7 +10,8 @@ def index(request):
 
 
 def evenements(request):
-    return render(request, 'evenements.html')
+    event_list = Event.objects.all()
+    return render(request, 'evenements.html', {'event_list': event_list})
 
 
 def photos(request):
