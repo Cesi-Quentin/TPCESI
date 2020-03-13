@@ -26,10 +26,10 @@
             <div class="members">
               <h1 class="page-header">Trombinoscope</h1>
 
-              {% for personne in perso_list %}
+              {% for perso in perso_list %}
               <div class="row member-row">
                 <div class="col-md-3">
-                  <img src="{{ perso.photo }}" class="img-thumbnail" alt="">
+                  <img src="{{ perso.photo.url }}" class="img-thumbnail" alt="">
                   <div class="text-center">
                     {{ perso.nom }} {{ perso.prenom }}
                   </div>

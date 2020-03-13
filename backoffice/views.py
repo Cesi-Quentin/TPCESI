@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.template import Context, loader
-from backoffice.models import Promotion, Event
+from backoffice.models import Promotion, Event, Personne
 from django.http import HttpResponse
 
 
@@ -28,4 +28,5 @@ def promo(request):
 
 
 def trombi(request):
-    return render(request, 'trombinoscope.html')
+    perso_list = Personne.object.all()
+    return render(request, 'trombinoscope.html', {'perso_list': perso_list})
