@@ -20,7 +20,12 @@ def photos(request):
 
 @login_required
 def profil(request):
-    return render(request, 'profil.html')
+    user = request.user
+    personne = Personne.object.filter(userid=user.id)
+    personne_dict = {
+        'personne': personne
+    }
+    return render(request, 'profil.html', personne_dict)
 
 @login_required
 def promo(request):
