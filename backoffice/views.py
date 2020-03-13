@@ -36,3 +36,9 @@ def promo(request):
 def trombi(request):
     perso_list = Personne.object.all()
     return render(request, 'trombinoscope.html', {'perso_list': perso_list})
+
+@login_required
+def listeleve(request, promo):
+    personne = Personne.object.filter(promotion_id=promo)
+    personne_dict = {'personne': personne}
+    return render(request, 'promotion_list_eleves.html', personne_dict)

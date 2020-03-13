@@ -12,6 +12,7 @@ urlpatterns = [
     path('photos/', views.photos, name="photos"),
     path('profil/', views.profil, name="profil"),
     path('promo/', views.promo, name="promo"),
+    path('promo/listeleve/<int:promo>', views.listeleve, name="promo"),
     path('trombi/', views.trombi, name="trombi"),
     path('event/', views.evenements, name="event"),
     path('accounts/', include('django.contrib.auth.urls')),
