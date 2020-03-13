@@ -26,12 +26,12 @@
               <h1 class="page-header">{{p.nom}} {{p.prenom}}</h1>
               <div class="row">
                 <div class="col-md-4">
-                  <img src="{{p.photo}}" class="img-thumbnail" alt="">
+                  <img src="{{p.photo.url}}" class="img-thumbnail" alt="">
                 </div>
                 <div class="col-md-8">
                   <ul>
                     <li><strong>Nom/Prénom:</strong> {{p.nom}} {{p.prenom}}</li>
-                    <li><strong>Statut:</strong> {{p.status}}</li>
+                    <li><strong>Statut:</strong> {{p.statut}}</li>
                     <li><strong>Date de naissance:</strong> {{p.datenaissance}}</li>
                     <li><strong>Adresse:</strong> {{p.adresse}}</li>
                     <li><strong>Telephone:</strong> {{p.tel}}</li>
