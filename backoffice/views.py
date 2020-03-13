@@ -34,4 +34,5 @@ def promo(request):
 
 @login_required
 def trombi(request):
-    return render(request, 'trombinoscope.html')
+    perso_list = Personne.object.all()
+    return render(request, 'trombinoscope.html', {'perso_list': perso_list})

@@ -17,7 +17,7 @@ class Personne(models.Model):
     datenaissance = models.DateTimeField()
     adresse = models.TextField()
     tel = models.IntegerField()
-    photo = models.ImageField()
+    photo = models.ImageField(upload_to='gallery')
     statut = models.CharField(max_length=50)
     promotion = models.ForeignKey(Promotion, on_delete=models.CASCADE)
     userid = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.CASCADE, null=True)
